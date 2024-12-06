@@ -9,9 +9,9 @@ class TopCard extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width / 0.2,
       height: MediaQuery.of(context).size.height * 0.08,
-      decoration: const BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.all(Radius.circular(20)),
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.primary,
+        borderRadius: const BorderRadius.all(Radius.circular(20)),
       ),
       child: Padding(
         padding: const EdgeInsets.all(12.0),

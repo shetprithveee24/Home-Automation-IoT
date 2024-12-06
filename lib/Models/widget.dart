@@ -12,6 +12,7 @@ class MainWidget extends StatelessWidget {
   final String secondaryText;
   final Color color;
   final bool isOn;
+  final String text;
 
   MainWidget({
     super.key,
@@ -22,12 +23,14 @@ class MainWidget extends StatelessWidget {
     required this.secondImagePath,
     required this.color,
     required this.isOn,
+    required this.text,
   });
 
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
-      duration: const Duration(milliseconds: 600),
+      duration: const Duration(milliseconds: 900),
+      curve: Curves.decelerate,
       width: MediaQuery.of(context).size.width * 0.44,
       height: MediaQuery.of(context).size.width * 0.6,
       decoration: BoxDecoration(
@@ -35,14 +38,23 @@ class MainWidget extends StatelessWidget {
         borderRadius: const BorderRadius.all(
           Radius.circular(20),
         ),
-        gradient: LinearGradient(
-          colors: [
-            color,
-            color.withOpacity(0.8),
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
+        gradient: isOn
+            ? LinearGradient(
+                colors: [
+                  color,
+                  color.withOpacity(0.6),
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              )
+            : LinearGradient(
+                colors: [
+                  color,
+                  color.withOpacity(0.8),
+                ],
+                begin: Alignment.bottomRight,
+                end: Alignment.topLeft,
+              ),
       ),
       child: Padding(
         padding: const EdgeInsets.all(15.0),
@@ -91,7 +103,7 @@ class MainWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  isOn ? "On" : "Off",
+                  isOn ? text : text,
                   style: GoogleFonts.poppins(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
