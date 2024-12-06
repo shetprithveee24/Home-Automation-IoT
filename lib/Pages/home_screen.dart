@@ -49,10 +49,10 @@ class _ControlPageState extends State<ControlPage> {
   //Toast Message
   void showToast(String message, String image, Color color) {
     DelightToastBar(
-      position: DelightSnackbarPosition.bottom,
+      position: DelightSnackbarPosition.top,
       autoDismiss: true,
-      snackbarDuration: const Duration(milliseconds: 1500),
-      animationDuration: const Duration(milliseconds: 300),
+      snackbarDuration: const Duration(milliseconds: 1200),
+      animationDuration: const Duration(milliseconds: 500),
       builder: (context) => ToastCard(
         color: color,
         leading: Image.asset(
@@ -82,7 +82,7 @@ class _ControlPageState extends State<ControlPage> {
     showToast(
       value ? "Main Light Turned On" : "Main Light Turned Off",
       value ? "images/lighton.png" : "images/lightoff.png",
-      Colors.teal,
+      Colors.teal.withOpacity(0.9),
     );
   }
 
@@ -93,9 +93,9 @@ class _ControlPageState extends State<ControlPage> {
     });
     sendRequest(value ? "/led_orange/on" : "/led_orange/off");
     showToast(
-      value ? "Study Light Turned On" : "Study Light Turned Off",
+      value ? "Study Lamp Turned On" : "Study Light Turned Off",
       value ? "images/lighton.png" : "images/lightoff.png",
-      const Color.fromARGB(255, 246, 190, 38),
+      const Color.fromARGB(255, 246, 190, 38).withOpacity(0.9),
     );
   }
 
@@ -108,7 +108,7 @@ class _ControlPageState extends State<ControlPage> {
     showToast(
       value ? "Sleeping Light Turned On" : "Sleeping Light Turned Off",
       value ? "images/lighton.png" : "images/lightoff.png",
-      const Color.fromARGB(255, 2, 88, 159),
+      const Color.fromARGB(255, 2, 88, 159).withOpacity(0.9),
     );
   }
 
@@ -121,7 +121,7 @@ class _ControlPageState extends State<ControlPage> {
     showToast(
       value ? "Door Opened" : "Door Closed",
       value ? "images/door-open1.png" : "images/door-close.png",
-      Colors.deepPurple,
+      Colors.deepPurple.withOpacity(0.9),
     );
   }
 
@@ -202,7 +202,8 @@ class _ControlPageState extends State<ControlPage> {
                           child: Icon(
                             themeToggle ? Icons.sunny : Icons.nightlight,
                             size: 35,
-                            color: themeToggle ? Colors.amber : Colors.white,
+                            color:
+                                themeToggle ? Colors.amber : Colors.deepPurple,
                           ),
                         ),
                       ),
@@ -239,10 +240,10 @@ class _ControlPageState extends State<ControlPage> {
                             mainText: "Study Mode",
                             secondaryText: "Study, Music",
                             imagePath: tableLamp
-                                ? "images/desk-lamp.png"
+                                ? "images/desk-lamp-on.png"
                                 : "images/tlamp-off.png",
                             secondImagePath: "images/wifi.png",
-                            color: const Color.fromARGB(255, 246, 190, 38),
+                            color: const Color.fromARGB(255, 245, 186, 25),
                             onChanged: tableLampControll,
                             isOn: tableLamp,
                             text: tableLamp ? "On" : "Off",

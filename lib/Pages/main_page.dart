@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:home_automation01/Models/bottom_nav_bar.dart';
 import 'package:home_automation01/Pages/home_screen.dart';
 import 'package:home_automation01/Pages/ip_page.dart';
-import 'package:home_automation01/Pages/settings_page.dart';
+import 'package:home_automation01/Pages/about_us.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -25,7 +25,7 @@ class _MainPageState extends State<MainPage> {
   //pages to display
   final List<Widget> _pages = [
     const ControlPage(),
-    const SettingsPage(),
+    SettingsPage(),
     const IPPage(),
   ];
 
