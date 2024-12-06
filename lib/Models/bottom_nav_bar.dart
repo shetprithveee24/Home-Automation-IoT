@@ -16,7 +16,7 @@ class MyBottomNavBar extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 10),
       child: GNav(
-        color: Colors.grey[500],
+        color: Colors.grey[600],
         activeColor: Colors.white,
         //tabActiveBorder: Border.all(color: Colors.white),
         tabBackgroundColor: Theme.of(context).colorScheme.secondary,
@@ -28,7 +28,7 @@ class MyBottomNavBar extends StatelessWidget {
         tabs: [
           GButton(
             gap: 10,
-            icon: Icons.home,
+            icon: Icons.home_filled,
             text: 'Home',
             textStyle: GoogleFonts.poppins(
               fontSize: 18,
@@ -38,8 +38,8 @@ class MyBottomNavBar extends StatelessWidget {
           ),
           GButton(
             gap: 10,
-            icon: Icons.settings,
-            text: 'Settings',
+            icon: Icons.info_rounded,
+            text: 'About us',
             textStyle: GoogleFonts.poppins(
               fontSize: 18,
               color: Colors.white,
