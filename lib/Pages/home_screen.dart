@@ -193,17 +193,18 @@ class _ControlPageState extends State<ControlPage> {
                         onTap: () {
                           Provider.of<ThemeProvider>(context, listen: false)
                               .toggleTheme();
-                          setState(() {
-                            themeToggle = !themeToggle;
-                          });
                         },
                         child: CircleAvatar(
                           radius: 28,
                           child: Icon(
-                            themeToggle ? Icons.sunny : Icons.nightlight,
+                            Provider.of<ThemeProvider>(context).isDarkMode
+                                ? Icons.nightlight
+                                : Icons.sunny,
                             size: 35,
                             color:
-                                themeToggle ? Colors.amber : Colors.deepPurple,
+                                Provider.of<ThemeProvider>(context).isDarkMode
+                                    ? Colors.deepPurple
+                                    : Colors.yellow,
                           ),
                         ),
                       ),
