@@ -46,16 +46,6 @@ class MyBottomNavBar extends StatelessWidget {
               fontWeight: FontWeight.w500,
             ),
           ),
-          GButton(
-            gap: 10,
-            icon: Icons.network_wifi,
-            text: 'IP',
-            textStyle: GoogleFonts.poppins(
-              fontSize: 18,
-              color: Colors.white,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
         ],
       ),
     );
