@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_automation01/Pages/main_page.dart';
-import 'package:home_automation01/Theme/theme_provider.dart';
+import 'package:home_automation01/Providers/theme_provider.dart';
 import 'package:provider/provider.dart';
 
 void main() {

@@ -19,7 +19,7 @@ class ControlPage extends StatefulWidget {
 }
 
 class _ControlPageState extends State<ControlPage> {
-  final String espIp = "192.168.43.37";
+  final String espIp = "192.168.xx.xx"; //Replace your ESP Board IP addresses
 
   bool mainLight = false; //Main light
 
