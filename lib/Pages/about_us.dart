@@ -11,6 +11,16 @@ class SettingsPage extends StatelessWidget {
 
   String aim =
       "To develop a cutting-edge smart home automation system that automates door & lighting based on occupancy, environmental factors, and user preferences, controlled through a seamless mobile application.";
+
+  String objectives =
+      "+ Automated Door Entry \n+ Automated Entry/Exit Lighting\n+ Mood-Based Lighting\n+ Eldercare\n+ Application Control";
+
+  String tools =
+      "+ IR Sensor\n+ Servo Motors\n+ PIR Sensors\n+ ESP 8266 WiFi Module\n+ Flutter Mobile Application\n+ Lighting System";
+
+  String methodology =
+      "+ Person Detection and Door Operation\n+ Room Occupancy Detection\n+ Lighting Control\n+ Mobile Application\n";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,46 +29,42 @@ class SettingsPage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
           child: Column(
             children: [
-              Column(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(15),
-                    child: ExpansionTile(
-                      tilePadding: EdgeInsets.all(10),
-                      childrenPadding: const EdgeInsets.symmetric(
-                          horizontal: 15, vertical: 10),
-                      collapsedBackgroundColor: Colors.deepPurple,
-                      expandedCrossAxisAlignment: CrossAxisAlignment.stretch,
-                      collapsedIconColor: Colors.white,
-                      backgroundColor: Colors.deepPurple,
-                      shape: LinearBorder.none,
-                      title: Text(
-                        "Introduction",
-                        style: GoogleFonts.poppins(
-                          fontSize: 18,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      children: [
-                        Image.asset(
-                          "images/IMG_0391.JPEG",
-                          width: 500,
-                          height: 240,
-                          fit: BoxFit.fill,
-                        ),
-                        const SizedBox(height: 10),
-                        Text(
-                          introduction,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 15,
-                          ),
-                        )
-                      ],
+              ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: ExpansionTile(
+                  tilePadding: const EdgeInsets.all(10),
+                  childrenPadding:
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                  collapsedBackgroundColor: Colors.deepPurple,
+                  expandedCrossAxisAlignment: CrossAxisAlignment.stretch,
+                  collapsedIconColor: Colors.white,
+                  backgroundColor: Colors.deepPurple,
+                  shape: LinearBorder.none,
+                  title: Text(
+                    "Introduction",
+                    style: GoogleFonts.poppins(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                ],
+                  children: [
+                    Image.asset(
+                      "images/IMG_0391.JPEG",
+                      width: 500,
+                      height: 280,
+                      fit: BoxFit.fill,
+                    ),
+                    const SizedBox(height: 10),
+                    Text(
+                      introduction,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                      ),
+                    )
+                  ],
+                ),
               ),
 
               //Aims and Objectives
@@ -66,7 +72,7 @@ class SettingsPage extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(15),
                 child: ExpansionTile(
-                  tilePadding: EdgeInsets.all(10),
+                  tilePadding: const EdgeInsets.all(10),
                   childrenPadding:
                       const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                   expandedAlignment: Alignment.centerLeft,
@@ -129,7 +135,75 @@ class SettingsPage extends StatelessWidget {
                       ],
                     ),
                     Text(
-                      "+ Automated Door Entry \n+ Automated Entry/Exit Lighting\n+ Mood-Based Lighting\n+ Eldercare\n+ Application Control",
+                      objectives,
+                      style: GoogleFonts.poppins(
+                        fontSize: 15,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              //Tools and Technologies
+              const SizedBox(height: 15),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: ExpansionTile(
+                  tilePadding: const EdgeInsets.all(10),
+                  childrenPadding:
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                  expandedAlignment: Alignment.centerLeft,
+                  expandedCrossAxisAlignment: CrossAxisAlignment.start,
+                  collapsedBackgroundColor: Colors.deepPurple,
+                  collapsedIconColor: Colors.white,
+                  backgroundColor: const Color.fromARGB(255, 243, 114, 33),
+                  shape: LinearBorder.none,
+                  title: Text(
+                    "Tools and Technologies",
+                    style: GoogleFonts.poppins(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  children: [
+                    Text(
+                      tools,
+                      style: GoogleFonts.poppins(
+                        fontSize: 15,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              //Methodology
+              const SizedBox(height: 15),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: ExpansionTile(
+                  tilePadding: const EdgeInsets.all(10),
+                  childrenPadding:
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                  expandedAlignment: Alignment.centerLeft,
+                  expandedCrossAxisAlignment: CrossAxisAlignment.start,
+                  collapsedBackgroundColor: Colors.deepPurple,
+                  collapsedIconColor: Colors.white,
+                  backgroundColor: const Color.fromARGB(255, 67, 46, 247),
+                  shape: LinearBorder.none,
+                  title: Text(
+                    "Methodology",
+                    style: GoogleFonts.poppins(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  children: [
+                    Text(
+                      methodology,
                       style: GoogleFonts.poppins(
                         fontSize: 15,
                         color: Colors.white,
