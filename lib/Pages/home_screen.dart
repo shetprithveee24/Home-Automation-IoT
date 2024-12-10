@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:home_automation01/Models/top_card.dart';
 import 'package:home_automation01/Models/widget.dart';
-import 'package:home_automation01/Theme/theme_provider.dart';
+import 'package:home_automation01/Providers/theme_provider.dart';
 import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
 
