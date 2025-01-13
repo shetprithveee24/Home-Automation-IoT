@@ -1,25 +1,60 @@
-# Smart-Home-Automation-System-Using-Arduino-Flutter-Mobile-App
+# Home Automation System
 
-A new Flutter project.
+A smart home automation system developed using **Arduino** and **Flutter**, designed to enhance lighting control and improve user convenience.
 
-## Introduction
+## Features
+- Automatic light activation and deactivation based on room entry and exit.
+- Mobile application control built with **Flutter**.
+- Integration with **Arduino** for seamless hardware-software interaction.
+- Support for mood-based and customizable lighting colors.
+- Energy-efficient design for sustainable usage.
 
-Our project is a Smart Home Automation System that leverages modern IoT technologies to enhance convenience, energy efficiency, and safety. By automating lighting and door mechanisms, we aim to address inefficiencies and challenges faced in traditional manual systems. This system especially benefits the elderly and people with disabilities, offering independence and ease of use.
+## Technologies Used
+- **Flutter**: This is for developing the mobile application interface.
+- **Arduino**: For hardware implementation and communication.
+- **Wi-Fi (ESP8266/ESP32)**: For wireless communication between devices.
 
-## Objectives
-Automated Door Entry: Doors open automatically when a user approaches, using an IR sensor to detect the presence of a servo motor for door operation.
-Entry/Exit Lighting: Lights turn on when entering a room and off when exiting, using a PIR sensor to detect occupancy.
-Mood-Based Lighting: RGB LEDs allow users to customize lighting colors based on mood or preferences, and they can be controlled via the mobile app.
-Eldercare Accessibility: Empower paralyzed or disabled individuals to control lights and fans using the mobile application.
-Mobile Application Control: The app communicates with the system via Wi-Fi (ESP8266) to enable full control of lights, fans, and other features.
-Fan Control: Users can turn the fan on/off through the app, similar to lighting controls.
+## Getting Started
 
-## Technologies and Sensors Used
-IR Sensors: Detect user presence near the door for automated entry.
-PIR Sensors: Monitor room occupancy to trigger lighting.
-Servo Motors: Operate door mechanisms for automated entry.
-ESP8266 Microcontroller: Facilitates communication between the sensors and mobile app.
-RGB LED Lights: Provide customizable lighting based on user preferences.
-Mobile Application: Acts as the primary user interface for controlling all aspects of the system.
+### Prerequisites
+- **Arduino IDE** installed on your computer.
+- **Flutter SDK** set up for mobile app development.
+- ESP8266/ESP32 Wi-Fi module.
 
-By integrating these components, our system offers a comprehensive solution for smart home automation, improving quality of life while ensuring energy efficiency and adaptability.
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/kavindualwis/home-automation.git
+   ```
+
+2. Open the **Arduino** folder and upload the code to your board using Arduino IDE.
+
+3. Navigate to the **Flutter** folder, install dependencies, and run the app:
+   ```bash
+   cd FlutterApp
+   flutter pub get
+   flutter run
+   ```
+
+## Usage
+- Install the app on your mobile device.
+- Connect the hardware to Wi-Fi using the provided configuration settings.
+- Use the mobile app to control lights, customize colors, and monitor system status.
+- Adjust settings for energy efficiency and mood-based lighting directly from the app.
+
+## Project Structure
+- **/Arduino**: The Arduino source code for hardware control.
+- **/FlutterApp**: Contains the Flutter project for the mobile application.
+
+## Future Enhancements
+- Add voice control capabilities.
+- Extend automation features to other appliances.
+- Implement machine learning for predictive lighting control based on user behavior.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+- Inspiration from IoT smart home technologies.
+- Support from the developer community.
