@@ -6,8 +6,6 @@ A smart home automation system developed using **Arduino** and **Flutter**, desi
 - Automatic light activation and deactivation based on room entry and exit.
 - Mobile application control built with **Flutter**.
 - Integration with **Arduino** for seamless hardware-software interaction.
-- Support for mood-based and customizable lighting colors.
-- Energy-efficient design for sustainable usage.
 
 ## Technologies Used
 - **Flutter**: This is for developing the mobile application interface.
@@ -25,7 +23,7 @@ A smart home automation system developed using **Arduino** and **Flutter**, desi
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/kavindualwis/home-automation.git
+   git clone https://github.com/banu4prasad/home-automation.git
    ```
 
 2. Open the **Arduino** folder and upload the code to your board using Arduino IDE.
