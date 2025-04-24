@@ -39,7 +39,6 @@ A smart home automation system developed using **Arduino** and **Flutter**, desi
 - Install the app on your mobile device.
 - Connect the hardware to Wi-Fi using the provided configuration settings.
 - Use the mobile app to control lights, customize colors, and monitor system status.
-- Adjust settings for energy efficiency and mood-based lighting directly from the app.
 
 ## Project Structure
 - **/Arduino**: The Arduino source code for hardware control.
